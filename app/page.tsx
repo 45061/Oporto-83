@@ -1,0 +1,25 @@
+import { HeroSection } from "@/components/hero-section"
+import { BenefitsSection } from "@/components/benefits-section"
+import { GallerySection } from "@/components/gallery-section"
+import { LocationSection } from "@/components/location-section"
+import { TestimonialsSection } from "@/components/testimonials-section"
+import { OffersSection } from "@/components/offers-section"
+import { RoomsSection } from "@/components/rooms-section"
+import { TrustSection } from "@/components/trust-section"
+import { Footer } from "@/components/footer"
+
+export default function HomePage() {
+  return (
+    <main className="min-h-screen">
+      <HeroSection />
+      <BenefitsSection />
+      <GallerySection />
+      <LocationSection />
+      <TestimonialsSection />
+      <OffersSection />
+      <RoomsSection />
+      <TrustSection />
+      <Footer />
+    </main>
+  )
+}
