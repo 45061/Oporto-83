@@ -6,13 +6,13 @@ export function LocationSection() {
       <div className="container mx-auto px-4">
         <h2 className="text-3xl font-bold text-center mb-12 text-balance">Ubicación Estratégica</h2>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 items-center">
           <div>
             <div className="aspect-video rounded-lg overflow-hidden mb-6">
               <img
-                src="/map-of-bogota-showing-hotel-location-near-el-dorad.jpg"
+                src="/Mapa.png"
                 alt="Mapa de ubicación Hotel Oporto 83"
-                className="w-full h-full object-cover"
+                className="w-105 h-mid object-cover"
               />
             </div>
           </div>
