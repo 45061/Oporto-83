@@ -7,7 +7,7 @@ export function HeroSection() {
       <div
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
         style={{
-          backgroundImage: `url('/modern-hotel-exterior-at-night-with-warm-lighting-.jpg')`,
+          backgroundImage: `url('/Pasillo_Oporto.jpg')`,
         }}
       >
         <div className="absolute inset-0 bg-black/40" />
@@ -19,7 +19,7 @@ export function HeroSection() {
           Tu descanso seguro cerca al Aeropuerto El Dorado
         </h1>
         <p className="text-xl md:text-2xl mb-8 text-balance leading-relaxed">
-          Habitaciones cómodas, desayuno incluido y atención personalizada en la mejor ubicación de Bogotá.
+          Habitaciones cómodas, servicio de desayuno y atención personalizada en la mejor ubicación de cerca al aeropuerto.
         </p>
         <Button
           size="lg"

@@ -1,4 +1,4 @@
-import { Wifi, Car, Coffee, Shield, Users } from "lucide-react"
+import { Wifi, Car, Coffee, Shield, Users, PawPrint, CigaretteOff, Award, Clock, Headset } from "lucide-react"
 
 const benefits = [
   {
@@ -13,7 +13,7 @@ const benefits = [
   },
   {
     icon: Coffee,
-    title: "Desayuno incluido",
+    title: "Servicio de desayuno",
     description: "Comienza tu día con energía",
   },
   {
@@ -25,6 +25,31 @@ const benefits = [
     icon: Users,
     title: "Para familias y ejecutivos",
     description: "Habitaciones adaptadas a tus necesidades",
+  },
+  {
+    icon: PawPrint,
+    title: "Pet Friendly",
+    description: "Tus mascotas son bienvenidas",
+  },
+  {
+    icon: CigaretteOff,
+    title: "Espacios Libres de Humo",
+    description: "Disfruta de un ambiente fresco y limpio",
+  },
+  {
+    icon: Award,
+    title: "Años de Experiencia",
+    description: "Más de 8 años en el sector hotelero",
+  },
+  {
+    icon: Clock,
+    title: "Respuesta Rápida",
+    description: "Atención al cliente 24/7",
+  },
+  {
+    icon: Headset,
+    title: "Soporte Dedicado",
+    description: "Asistencia personalizada para lo que necesites",
   },
 ]
 
