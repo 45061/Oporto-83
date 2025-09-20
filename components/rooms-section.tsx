@@ -1,3 +1,5 @@
+'use client'
+
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardFooter } from "@/components/ui/card"
 
@@ -47,7 +49,17 @@ export function RoomsSection() {
                 </ul>
               </CardContent>
               <CardFooter className="p-6 pt-0">
-                <Button className="w-full bg-primary hover:bg-primary/90">Reservar esta habitación</Button>
+                <Button className="w-full bg-primary hover:bg-primary/90" asChild>
+                  <a
+                    href={`https://wa.me/573197981552?text=${encodeURIComponent(
+                      `Hola, quisiera reservar la ${room.name}.`
+                    )}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Reservar esta habitación
+                  </a>
+                </Button>
               </CardFooter>
             </Card>
           ))}

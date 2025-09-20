@@ -12,6 +12,9 @@ export const metadata: Metadata = {
   description:
     "Hotel boutique en Bogotá, ubicado estratégicamente cerca al Aeropuerto El Dorado. Comodidad, ubicación y atención personalizada.",
   generator: "v0.app",
+  icons: {
+    icon: "/OPORTO-05.png",
+  },
 }
 
 export default function RootLayout({

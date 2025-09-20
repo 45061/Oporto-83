@@ -1,5 +1,6 @@
-"use client"
+'use client'
 
+import Image from "next/image"
 import Link from "next/link"
 import { useState } from "react"
 import { Menu, X, Phone } from "lucide-react"
@@ -20,9 +21,13 @@ export default function Navbar() {
       <div className="container mx-auto px-4">
         <div className="flex h-16 items-center justify-between">
           <Link href="/" className="flex items-center space-x-3">
-            <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-primary text-primary-foreground font-bold text-lg">
-              H83
-            </div>
+            <Image
+              src="/OPORTO-05.png"
+              alt="Hotel Oporto 83 Logo"
+              width={40}
+              height={40}
+              className="h-18 w-20"
+            />
             <div className="hidden sm:block">
               <div className="text-xl font-bold text-primary">Hotel Oporto 83</div>
               <div className="text-xs text-muted-foreground">Cerca al Aeropuerto</div>

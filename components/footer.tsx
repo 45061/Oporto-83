@@ -86,8 +86,11 @@ function Footer() {
               <Button
                 variant="outline"
                 className="border-secondary bg-secondary text-secondary-foreground hover:bg-secondary/90"
+                asChild
               >
-                +57 319 798 1552
+                <a href="https://wa.me/573197981552" target="_blank" rel="noopener noreferrer">
+                  +57 319 798 1552
+                </a>
               </Button>
             </div>
           </div>

@@ -1,3 +1,5 @@
+'use client'
+
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
@@ -89,20 +91,17 @@ export const rooms = [
     description: "La máxima expresión de lujo y confort para una experiencia inolvidable.",
     features: [
       "Sala de estar separada",
-      "Jacuzzi",
       "Vista panorámica",
-      "Servicio de habitaciones 24h",
       "Amenidades premium",
     ],
     amenities: [
-      { icon: Users, label: "Hasta 3 personas" },
-      { icon: Bath, label: "Jacuzzi" },
-      { icon: Wifi, label: "WiFi premium" },
-      { icon: Tv, label: 'TV 55"' },
-      { icon: Coffee, label: "Minibar premium" },
-      { icon: Car, label: "Parqueadero VIP" },
+      { icon: Users, label: "Hasta 5 personas" },
+      { icon: Wifi, label: "WiFi" },
+      { icon: Tv, label: 'TV 32"' },
+      { icon: Coffee, label: "Cocina" },
+      { icon: Car, label: "Servicio de parqueadero" },
     ],
-    capacity: "2-3 personas",
+    capacity: "2-5 personas",
     size: "40 m²",
   },
 ]
@@ -171,7 +170,17 @@ export function RoomsGrid() {
                   </TabsContent>
                 </Tabs>
 
-                <Button className="w-full mt-6 bg-cyan-600 hover:bg-cyan-700">Reservar ahora</Button>
+                <Button className="w-full mt-6 bg-cyan-600 hover:bg-cyan-700" asChild>
+                  <a
+                    href={`https://wa.me/573197981552?text=${encodeURIComponent(
+                      `Hola, quisiera reservar la ${room.name}.`
+                    )}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Reservar ahora
+                  </a>
+                </Button>
               </CardContent>
             </Card>
           ))}
