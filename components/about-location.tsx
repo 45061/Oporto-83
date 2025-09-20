@@ -74,7 +74,7 @@ export default function AboutLocation() {
             </div>
             <div>
               <img
-                src="/bogota-city-skyline-with-el-dorado-airport-in-back.jpg"
+                src="/Bogota.png"
                 alt="Ubicación del Hotel Oporto 83"
                 className="rounded-lg shadow-md w-full"
               />

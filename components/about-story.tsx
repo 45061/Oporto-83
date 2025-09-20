@@ -15,7 +15,7 @@ export default function AboutStory() {
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div>
               <img
-                src="/placeholder-70n81.png"
+                src="/Sillon.jpg"
                 alt="Historia del Hotel Oporto 83"
                 className="rounded-lg shadow-lg w-full"
               />
@@ -25,7 +25,7 @@ export default function AboutStory() {
                 <CardContent className="p-6">
                   <h3 className="text-2xl font-semibold text-gray-900 mb-4">Fundación</h3>
                   <p className="text-gray-600">
-                    Fundado en 1983, el Hotel Oporto 83 nació con la visión de ofrecer hospitalidad excepcional a
+                    Fundado en 2018, el Hotel Oporto 83 nació con la visión de ofrecer hospitalidad excepcional a
                     viajeros de negocios y turistas que buscan comodidad y ubicación estratégica cerca del Aeropuerto El
                     Dorado.
                   </p>
@@ -36,7 +36,7 @@ export default function AboutStory() {
                 <CardContent className="p-6">
                   <h3 className="text-2xl font-semibold text-gray-900 mb-4">Evolución</h3>
                   <p className="text-gray-600">
-                    A lo largo de más de 40 años, hemos evolucionado constantemente, renovando nuestras instalaciones y
+                    A lo largo de más de 7 años, hemos evolucionado constantemente, renovando nuestras instalaciones y
                     servicios para mantenernos a la vanguardia de la industria hotelera colombiana.
                   </p>
                 </CardContent>
@@ -47,7 +47,7 @@ export default function AboutStory() {
                   <h3 className="text-2xl font-semibold text-gray-900 mb-4">Presente</h3>
                   <p className="text-gray-600">
                     Hoy somos reconocidos como uno de los hoteles más confiables y cómodos de Bogotá, con más de 10,000
-                    huéspedes satisfechos cada año.
+                    huéspedes satisfechos.
                   </p>
                 </CardContent>
               </Card>

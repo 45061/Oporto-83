@@ -7,7 +7,7 @@ export default function AboutHero() {
       <div
         className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-20"
         style={{
-          backgroundImage: "url('/placeholder-46u9s.png')",
+          backgroundImage: "url('/Nosotros.jpg')",
         }}
       />
       <div className="relative z-10 text-center text-white max-w-4xl mx-auto px-4">

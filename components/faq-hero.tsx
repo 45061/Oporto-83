@@ -12,17 +12,22 @@ export default function FAQHero() {
             buscas, no dudes en contactarnos.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="lg" className="bg-cyan-600 hover:bg-cyan-700">
-              <Phone className="mr-2 h-5 w-5" />
-              Llamar Ahora
+            <Button size="lg" className="bg-cyan-600 hover:bg-cyan-700" asChild>
+              <a href="tel:+573197981552">
+                <Phone className="mr-2 h-5 w-5" />
+                Llamar Ahora
+              </a>
             </Button>
             <Button
               size="lg"
               variant="outline"
               className="border-amber-500 text-amber-600 hover:bg-amber-50 bg-transparent"
+              asChild
             >
-              <MessageCircle className="mr-2 h-5 w-5" />
-              Chat en Vivo
+              <a href="https://wa.me/573197981552">
+                <MessageCircle className="mr-2 h-5 w-5" />
+                Chat en Vivo
+              </a>
             </Button>
           </div>
         </div>

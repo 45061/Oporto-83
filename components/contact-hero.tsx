@@ -14,7 +14,7 @@ export default function ContactHero() {
 
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
           <Button size="lg" className="bg-cyan-600 hover:bg-cyan-700 text-white px-8 py-3" asChild>
-            <a href="tel:+5712345678" className="flex items-center gap-2">
+            <a href="tel:+573197981552" className="flex items-center gap-2">
               <Phone className="w-5 h-5" />
               Llamar Ahora
             </a>
@@ -26,14 +26,14 @@ export default function ContactHero() {
             className="border-white text-white hover:bg-white hover:text-slate-900 px-8 py-3 bg-transparent"
             asChild
           >
-            <a href="mailto:reservas@hoteloporto83.com" className="flex items-center gap-2">
+            <a href="mailto:oporto83bogota@gmail.com?subject=Solicitud%20de%20Información%20de%20Hospedaje&body=Hola,%20quisiera%20solicitar%20información%20sobre%20el%20hospedaje." className="flex items-center gap-2">
               <Mail className="w-5 h-5" />
               Enviar Email
             </a>
           </Button>
 
           <Button size="lg" className="bg-green-600 hover:bg-green-700 text-white px-8 py-3" asChild>
-            <a href="https://wa.me/573001234567" className="flex items-center gap-2">
+            <a href="https://wa.me/573197981552?text=Hola,%20quisiera%20solicitar%20información%20sobre%20el%20hospedaje." className="flex items-center gap-2">
               <MessageCircle className="w-5 h-5" />
               WhatsApp
             </a>

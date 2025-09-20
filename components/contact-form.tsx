@@ -23,10 +23,25 @@ export default function ContactForm() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()
-    // Simulate form submission
-    setTimeout(() => {
-      setIsSubmitted(true)
-    }, 1000)
+
+    const message = `
+      ¡Hola! Quisiera solicitar información con los siguientes datos:
+      -------------------------------------
+      *Nombre:* ${formData.name}
+      *Email:* ${formData.email}
+      *Teléfono:* ${formData.phone || "No proporcionado"}
+      -------------------------------------
+      *Asunto:* ${formData.subject}
+      *Mensaje:* ${formData.message}
+      -------------------------------------
+      ¡Quedo a la espera de su respuesta!
+    `
+
+    const whatsappNumber = "+573197981552" // Reemplaza con tu número de WhatsApp
+    const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`
+
+    window.open(whatsappUrl, "_blank")
+    setIsSubmitted(true)
   }
 
   const handleInputChange = (field: string, value: string) => {
