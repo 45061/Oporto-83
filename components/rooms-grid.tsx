@@ -13,7 +13,7 @@ export const rooms = [
     price: "80,000",
     image: "/Sencilla.png",
     description: "Perfecta para viajeros de negocios que buscan comodidad y funcionalidad.",
-    features: ["Escritorio ejecutivo", "WiFi de alta velocidad", 'TV 32', "Baño privado"],
+    features: ["WiFi de alta velocidad", 'TV 32', "Baño privado"],
     amenities: [
       { icon: Wifi, label: "WiFi gratis" },
       { icon: Tv, label: 'TV 32"' },
@@ -29,7 +29,7 @@ export const rooms = [
     price: "100,000",
     image: "/Doble.jpg",
     description: "Amplia y cómoda, ideal para parejas y viajeros de negocios.",
-    features: ["Camas doble", "Escritorio ejecutivo", "WiFi de alta velocidad", 'TV 32', "Baño privado"],
+    features: ["Cama doble", "Escritorio ejecutivo", "WiFi de alta velocidad", 'TV 32', "Baño privado"],
     amenities: [
       { icon: Users, label: "Hasta 2 personas" },
       { icon: Bed, label: "Camas doble" },

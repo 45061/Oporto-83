@@ -20,7 +20,7 @@ export default function ContactInfo() {
     {
       icon: Mail,
       title: "Email",
-      info: "oteloporto83bogota@gmail.com",
+      info: "oporto83bogota@gmail.com",
       subinfo: "Respuesta en menos de 2 horas",
       color: "text-cyan-600",
     },
