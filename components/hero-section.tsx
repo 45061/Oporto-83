@@ -1,3 +1,5 @@
+'use client'
+
 import { Button } from "@/components/ui/button"
 
 export function HeroSection() {
@@ -24,15 +26,20 @@ export function HeroSection() {
         <Button
           size="lg"
           className="bg-secondary hover:bg-secondary/90 text-secondary-foreground text-lg px-8 py-4 h-auto"
+          asChild
         >
-          📅 Reserva Ahora
+          <a href="https://wa.me/573197981552?text=Hola,%20quisiera%20reservar%20una%20habitación." target="_blank" rel="noopener noreferrer">
+            📅 Reserva Ahora
+          </a>
         </Button>
       </div>
 
       {/* Floating CTA Button */}
       <div className="fixed bottom-6 right-6 z-50">
-        <Button size="lg" className="bg-secondary hover:bg-secondary/90 text-secondary-foreground shadow-lg">
-          📅 Reservar
+        <Button size="lg" className="bg-secondary hover:bg-secondary/90 text-secondary-foreground shadow-lg" asChild>
+          <a href="https://wa.me/573197981552?text=Hola,%20quisiera%20reservar%20una%20habitación." target="_blank" rel="noopener noreferrer">
+            📅 Reservar
+          </a>
         </Button>
       </div>
     </section>

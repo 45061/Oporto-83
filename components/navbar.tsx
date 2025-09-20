@@ -71,9 +71,11 @@ export default function Navbar() {
           </div>
 
           <div className="flex items-center space-x-4">
-            <Button className="hidden sm:inline-flex bg-secondary hover:bg-secondary/90 text-secondary-foreground">
-              <Phone className="w-4 h-4 mr-2" />
-              Reservar Ahora
+            <Button className="hidden sm:inline-flex bg-secondary hover:bg-secondary/90 text-secondary-foreground" asChild>
+              <a href="https://wa.me/573197981552?text=Hola,%20quisiera%20reservar%20una%20habitación." target="_blank" rel="noopener noreferrer">
+                <Phone className="w-4 h-4 mr-2" />
+                Reservar Ahora
+              </a>
             </Button>
 
             <Button variant="ghost" size="icon" className="md:hidden" onClick={() => setIsOpen(!isOpen)}>
@@ -121,9 +123,11 @@ export default function Navbar() {
                 FAQ
               </Link>
               <div className="px-3 py-2">
-                <Button className="w-full bg-secondary hover:bg-secondary/90 text-secondary-foreground">
-                  <Phone className="w-4 h-4 mr-2" />
-                  Reservar Ahora
+                <Button className="w-full bg-secondary hover:bg-secondary/90 text-secondary-foreground" asChild>
+                  <a href="https://wa.me/573197981552?text=Hola,%20quisiera%20reservar%20una%20habitación." target="_blank" rel="noopener noreferrer">
+                    <Phone className="w-4 h-4 mr-2" />
+                    Reservar Ahora
+                  </a>
                 </Button>
               </div>
             </div>
