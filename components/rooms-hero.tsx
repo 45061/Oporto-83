@@ -7,7 +7,7 @@ export function RoomsHero() {
       <div
         className="absolute inset-0 bg-cover bg-center opacity-30"
         style={{
-          backgroundImage: "url('/luxury-hotel-room-interior-with-modern-design.jpg')",
+          backgroundImage: "url('/EspecialRoom.jpg')",
         }}
       />
       <div className="relative z-10 text-center text-white max-w-4xl mx-auto px-4">

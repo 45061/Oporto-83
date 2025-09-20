@@ -1,5 +1,5 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
-import { Wifi, Car, Coffee, Tv, Bath, Wind, Shield, Clock, Utensils, Dumbbell, Waves, Phone } from "lucide-react"
+import { Wifi, Car, Coffee, Tv, Bath, Wind, Shield, Clock, Utensils, Briefcase, ShoppingBag, Phone, WashingMachine, Sun } from "lucide-react"
 
 const amenities = [
   {
@@ -7,31 +7,31 @@ const amenities = [
     items: [
       { icon: Wifi, name: "WiFi gratuito de alta velocidad", description: "Internet rápido en todas las áreas" },
       { icon: Tv, name: "TV por cable", description: "Canales nacionales e internacionales" },
-      { icon: Phone, name: "Teléfono directo", description: "Llamadas locales gratuitas" },
     ],
   },
   {
     category: "Comodidades",
     items: [
-      { icon: Wind, name: "Aire acondicionado", description: "Control de temperatura individual" },
       { icon: Bath, name: "Baño privado", description: "Con agua caliente 24 horas" },
-      { icon: Coffee, name: "Cafetera", description: "Café y té de cortesía" },
+      { icon: Coffee, name: "Cafetera", description: "Café y té" },
+      { icon: Sun, name: "Habitaciones con luz natural", description: "Ambientes luminosos y agradables" },
     ],
   },
   {
     category: "Servicios",
     items: [
-      { icon: Car, name: "Parqueadero gratuito", description: "Espacios seguros y vigilados" },
+      { icon: Car, name: "Servicio deParqueadero", description: "Espacios seguros y vigilados" },
       { icon: Shield, name: "Seguridad 24/7", description: "Recepción y vigilancia permanente" },
       { icon: Clock, name: "Check-in/out flexible", description: "Horarios adaptados a tu vuelo" },
+      { icon: WashingMachine, name: "Servicio de Lavanderia", description: "Lavado y planchado de ropa" },
     ],
   },
   {
     category: "Adicionales",
     items: [
       { icon: Utensils, name: "Restaurante", description: "Desayuno buffet y menú a la carta" },
-      { icon: Dumbbell, name: "Gimnasio", description: "Equipos modernos 24 horas" },
-      { icon: Waves, name: "Piscina", description: "Área de relajación y descanso" },
+      { icon: Briefcase, name: "Zona de Cooworking", description: "Espacio de trabajo compartido" },
+      { icon: ShoppingBag, name: "Tienda de recuerdos", description: "Recuerdos y productos locales" },
     ],
   },
 ]

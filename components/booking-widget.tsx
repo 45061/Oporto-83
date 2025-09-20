@@ -4,6 +4,7 @@ import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
 import { Calendar, Users, Phone, Mail } from "lucide-react"
+import { rooms } from "./rooms-grid"
 
 export function BookingWidget() {
   return (
@@ -46,9 +47,11 @@ export function BookingWidget() {
                       <SelectValue placeholder="Selecciona una habitación" />
                     </SelectTrigger>
                     <SelectContent>
-                      <SelectItem value="ejecutiva">Habitación Ejecutiva - $180,000</SelectItem>
-                      <SelectItem value="familiar">Habitación Familiar - $220,000</SelectItem>
-                      <SelectItem value="suite">Premium Suite - $280,000</SelectItem>
+                      {rooms.map((room) => (
+                        <SelectItem key={room.id} value={room.id}>
+                          {room.name} - ${room.price}
+                        </SelectItem>
+                      ))}
                     </SelectContent>
                   </Select>
                 </div>
@@ -103,10 +106,10 @@ export function BookingWidget() {
               <div className="bg-slate-50 p-4 rounded-lg">
                 <h3 className="font-semibold text-slate-900 mb-2">Políticas de reserva:</h3>
                 <ul className="text-sm text-slate-600 space-y-1">
-                  <li>• Check-in: 3:00 PM - Check-out: 12:00 PM</li>
+                  <li>• Check-in: 2:00 PM - Check-out: 12:00 PM</li>
                   <li>• Cancelación gratuita hasta 24 horas antes</li>
-                  <li>• Traslado gratuito desde/hacia el aeropuerto</li>
-                  <li>• Desayuno incluido en todas las tarifas</li>
+                  <li>• Servicio de traslado desde/hacia el aeropuerto</li>
+                  <li>• Servicio de desayuno</li>
                 </ul>
               </div>
 
@@ -125,11 +128,11 @@ export function BookingWidget() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button variant="outline" className="bg-white text-cyan-600 hover:bg-cyan-50">
               <Phone className="w-4 h-4 mr-2" />
-              +57 (1) 234-5678
+              +57 (319) 798 1552
             </Button>
             <Button variant="outline" className="bg-white text-cyan-600 hover:bg-cyan-50">
               <Mail className="w-4 h-4 mr-2" />
-              reservas@oporto83.com
+              oporto83bogota@gmail.com
             </Button>
           </div>
         </div>
