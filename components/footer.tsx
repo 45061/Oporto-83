@@ -63,15 +63,21 @@ function Footer() {
                 size="icon"
                 variant="outline"
                 className="border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary bg-transparent"
+                asChild
               >
-                <Instagram className="w-4 h-4" />
+                <a href="https://www.instagram.com/apartahoteloporto83?igsh=MWJycHVqYnk3cGo5eg==" target="_blank" rel="noopener noreferrer">
+                  <Instagram className="w-4 h-4" />
+                </a>
               </Button>
               <Button
                 size="icon"
                 variant="outline"
                 className="border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary bg-transparent"
+                asChild
               >
-                <Facebook className="w-4 h-4" />
+                <a href="https://www.facebook.com/share/1CNEfQ6m4A/" target="_blank" rel="noopener noreferrer">
+                  <Facebook className="w-4 h-4" />
+                </a>
               </Button>
             </div>
 
