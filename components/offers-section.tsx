@@ -17,21 +17,13 @@ export function OffersSection() {
           </h2>
 
           <p className="text-xl mb-8 text-secondary-foreground/90 text-balance">
-            Reserva directo en nuestra web y recibe 10% de descuento + desayuno gratis
+            Reserva directo en nuestra web y recibe nuestro descuento de temporadas.
           </p>
 
           <div className="flex items-center justify-center gap-2 mb-8">
             <Clock className="w-5 h-5 text-secondary-foreground/80" />
             <span className="text-secondary-foreground/80">Oferta válida hasta fin de mes</span>
           </div>
-
-          <Button
-            size="lg"
-            variant="outline"
-            className="bg-secondary-foreground text-secondary hover:bg-secondary-foreground/90 border-secondary-foreground text-lg px-8 py-4 h-auto"
-          >
-            Reserva y aprovecha la oferta →
-          </Button>
         </div>
       </div>
     </section>

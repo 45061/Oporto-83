@@ -1,69 +1,108 @@
+'use client'
+
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { Wifi, Car, Coffee, Tv, Bath, Wind, Users, Bed } from "lucide-react"
 
-const rooms = [
+export const rooms = [
   {
-    id: "ejecutiva",
-    name: "Habitación Ejecutiva",
-    price: "180,000",
-    image: "/modern-executive-hotel-room-with-desk-and-city-vie.jpg",
+    id: "sencilla",
+    name: "Habitación Sencilla",
+    price: "80,000",
+    image: "/Sencilla.png",
     description: "Perfecta para viajeros de negocios que buscan comodidad y funcionalidad.",
-    features: ["Escritorio ejecutivo", "WiFi de alta velocidad", 'TV 43"', "Baño privado", "Aire acondicionado"],
+    features: ["WiFi de alta velocidad", 'TV 32', "Baño privado"],
     amenities: [
       { icon: Wifi, label: "WiFi gratis" },
-      { icon: Tv, label: 'TV 43"' },
-      { icon: Wind, label: "A/C" },
+      { icon: Tv, label: 'TV 32"' },
       { icon: Bath, label: "Baño privado" },
-      { icon: Coffee, label: "Cafetera" },
-      { icon: Car, label: "Parqueadero" },
+      { icon: Car, label: "Servicio de parqueadero" },
+    ],
+    capacity: "1 persona",
+    size: "8 m²",
+  },
+  {
+    id: "doble",
+    name: "Habitación Doble",
+    price: "100,000",
+    image: "/Doble.jpg",
+    description: "Amplia y cómoda, ideal para parejas y viajeros de negocios.",
+    features: ["Cama doble", "Escritorio ejecutivo", "WiFi de alta velocidad", 'TV 32', "Baño privado"],
+    amenities: [
+      { icon: Users, label: "Hasta 2 personas" },
+      { icon: Bed, label: "Camas doble" },
+      { icon: Wifi, label: "WiFi gratis" },
+      { icon: Tv, label: 'TV 32"' },
+      { icon: Car, label: "Servicio de parqueadero" },
     ],
     capacity: "1-2 personas",
-    size: "25 m²",
+    size: "11 m²",
   },
   {
-    id: "familiar",
-    name: "Habitación Familiar",
-    price: "220,000",
-    image: "/spacious-family-hotel-room-with-two-beds-and-seati.jpg",
-    description: "Amplia y cómoda, ideal para familias que viajan juntas.",
-    features: ["Dos camas dobles", "Área de estar", "Minibar", "Caja fuerte", "Balcón privado"],
-    amenities: [
-      { icon: Users, label: "Hasta 4 personas" },
-      { icon: Bed, label: "Dos camas dobles" },
-      { icon: Wifi, label: "WiFi gratis" },
-      { icon: Tv, label: 'TV 50"' },
-      { icon: Wind, label: "A/C" },
-      { icon: Car, label: "Parqueadero" },
-    ],
-    capacity: "2-4 personas",
-    size: "35 m²",
-  },
-  {
-    id: "suite",
-    name: "Premium Suite",
-    price: "280,000",
-    image: "/luxury-hotel-suite.png",
-    description: "La máxima expresión de lujo y confort para una experiencia inolvidable.",
+    id: "triple",
+    name: "Habitación Triple",
+    price: "115,000",
+    image: "/Triple.jpg",
+    description: "Comoda, ideal para familias.",
     features: [
-      "Sala de estar separada",
-      "Jacuzzi",
-      "Vista panorámica",
-      "Servicio de habitaciones 24h",
-      "Amenidades premium",
+      "Cama doble",
+      "Cama sencilla",
+      "TV 32",
+      "WiFi de alta velocidad",
+      "Baño privado",
     ],
     amenities: [
       { icon: Users, label: "Hasta 3 personas" },
-      { icon: Bath, label: "Jacuzzi" },
       { icon: Wifi, label: "WiFi premium" },
-      { icon: Tv, label: 'TV 55"' },
-      { icon: Coffee, label: "Minibar premium" },
-      { icon: Car, label: "Parqueadero VIP" },
+      { icon: Tv, label: 'TV 32"' },
+      { icon: Car, label: "Servicio de parqueadero" },
     ],
     capacity: "2-3 personas",
-    size: "50 m²",
+    size: "15 m²",
+  },
+    {
+    id: "cuadruple",
+    name: "Habitación Cuadruple",
+    price: "135,000",
+    image: "/Cuadruple.png",
+    description: "La máxima expresión de confort para familias y viajeros de negocios.",
+    features: [
+      "Dos camas dobles",
+      "Dos TV 32",
+      "WiFi de alta velocidad",
+      "Baño privado",
+    ],
+    amenities: [
+      { icon: Users, label: "Hasta 4 personas" },
+      { icon: Wifi, label: "WiFi premium" },
+      { icon: Tv, label: 'TV 32"' },
+      { icon: Car, label: "Servicio de parqueadero" },
+    ],
+    capacity: "2-4 personas",
+    size: "22 m²",
+  },
+    {
+    id: "apartaEstudio",
+    name: "Aparta Estudio",
+    price: "155,000",
+    image: "/Habitacion.jpg",
+    description: "La máxima expresión de lujo y confort para una experiencia inolvidable.",
+    features: [
+      "Sala de estar separada",
+      "Vista panorámica",
+      "Amenidades premium",
+    ],
+    amenities: [
+      { icon: Users, label: "Hasta 5 personas" },
+      { icon: Wifi, label: "WiFi" },
+      { icon: Tv, label: 'TV 32"' },
+      { icon: Coffee, label: "Cocina" },
+      { icon: Car, label: "Servicio de parqueadero" },
+    ],
+    capacity: "2-5 personas",
+    size: "40 m²",
   },
 ]
 
@@ -131,7 +170,17 @@ export function RoomsGrid() {
                   </TabsContent>
                 </Tabs>
 
-                <Button className="w-full mt-6 bg-cyan-600 hover:bg-cyan-700">Reservar ahora</Button>
+                <Button className="w-full mt-6 bg-cyan-600 hover:bg-cyan-700" asChild>
+                  <a
+                    href={`https://wa.me/573197981552?text=${encodeURIComponent(
+                      `Hola, quisiera reservar la ${room.name}.`
+                    )}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Reservar ahora
+                  </a>
+                </Button>
               </CardContent>
             </Card>
           ))}

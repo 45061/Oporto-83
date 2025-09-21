@@ -1,5 +1,6 @@
 import { MapPin, Phone, Mail, Instagram, Facebook } from "lucide-react"
 import { Button } from "@/components/ui/button"
+import Link from "next/link"
 
 function Footer() {
   return (
@@ -16,15 +17,15 @@ function Footer() {
             <div className="space-y-3">
               <div className="flex items-center gap-3">
                 <MapPin className="w-5 h-5" />
-                <span>Calle 83 #68-45, Bogotá, Colombia</span>
+                <span>Calle 23 #83-20, Bogotá, Colombia</span>
               </div>
               <div className="flex items-center gap-3">
                 <Phone className="w-5 h-5" />
-                <span>+57 (1) 234-5678</span>
+                <span>+57 (319) 798-1552</span>
               </div>
               <div className="flex items-center gap-3">
                 <Mail className="w-5 h-5" />
-                <span>reservas@hoteloporto83.com</span>
+                <span>oporto83bogota@gmail.com</span>
               </div>
             </div>
           </div>
@@ -33,34 +34,24 @@ function Footer() {
             <h4 className="font-semibold mb-4">Enlaces Rápidos</h4>
             <ul className="space-y-2">
               <li>
-                <a href="/rooms" className="hover:text-secondary transition-colors">
+                <Link href="/rooms" className="hover:text-secondary transition-colors">
                   Habitaciones
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="/about" className="hover:text-secondary transition-colors">
+                <Link href="/about" className="hover:text-secondary transition-colors">
                   Quiénes Somos
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#reservar" className="hover:text-secondary transition-colors">
-                  Reservar
-                </a>
-              </li>
-              <li>
-                <a href="/contact" className="hover:text-secondary transition-colors">
+                <Link href="/contact" className="hover:text-secondary transition-colors">
                   Contacto
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="/faq" className="hover:text-secondary transition-colors">
+                <Link href="/faq" className="hover:text-secondary transition-colors">
                   Preguntas Frecuentes
-                </a>
-              </li>
-              <li>
-                <a href="#ubicacion" className="hover:text-secondary transition-colors">
-                  Ubicación
-                </a>
+                </Link>
               </li>
             </ul>
           </div>
@@ -72,15 +63,21 @@ function Footer() {
                 size="icon"
                 variant="outline"
                 className="border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary bg-transparent"
+                asChild
               >
-                <Instagram className="w-4 h-4" />
+                <a href="https://www.instagram.com/apartahoteloporto83?igsh=MWJycHVqYnk3cGo5eg==" target="_blank" rel="noopener noreferrer">
+                  <Instagram className="w-4 h-4" />
+                </a>
               </Button>
               <Button
                 size="icon"
                 variant="outline"
                 className="border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary bg-transparent"
+                asChild
               >
-                <Facebook className="w-4 h-4" />
+                <a href="https://www.facebook.com/share/1CNEfQ6m4A/" target="_blank" rel="noopener noreferrer">
+                  <Facebook className="w-4 h-4" />
+                </a>
               </Button>
             </div>
 
@@ -89,8 +86,11 @@ function Footer() {
               <Button
                 variant="outline"
                 className="border-secondary bg-secondary text-secondary-foreground hover:bg-secondary/90"
+                asChild
               >
-                +57 300 123 4567
+                <a href="https://wa.me/573197981552" target="_blank" rel="noopener noreferrer">
+                  +57 319 798 1552
+                </a>
               </Button>
             </div>
           </div>

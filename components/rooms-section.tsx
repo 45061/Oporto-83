@@ -1,24 +1,26 @@
+'use client'
+
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardFooter } from "@/components/ui/card"
 
 const rooms = [
   {
-    name: "Habitación Ejecutiva",
-    price: "Desde $180.000 COP/noche",
-    image: "/executive-hotel-room-with-desk-and-city-view.jpg",
-    features: ["Cama King Size", "Escritorio de trabajo", "Vista a la ciudad"],
+    name: "Habitación Doble",
+    price: "Desde $100.000 COP/noche",
+    image: "/Doble.jpg",
+    features: ["Cama Doble", "Escritorio de trabajo", "Luz Natural"],
   },
   {
-    name: "Habitación Familiar",
-    price: "Desde $220.000 COP/noche",
-    image: "/family-hotel-room.png",
-    features: ["2 Camas Dobles", "Espacio amplio", "Ideal para familias"],
+    name: "Habitación Triple",
+    price: "Desde $115.000 COP/noche",
+    image: "/Triple.jpg",
+    features: ["1 Camas Doble  y 1 Sencilla", "Espacio amplio", "Ideal para familias"],
   },
   {
-    name: "Suite Premium",
-    price: "Desde $280.000 COP/noche",
-    image: "/luxury-hotel-suite-with-living-area.jpg",
-    features: ["Sala de estar", "Jacuzzi privado", "Servicio premium"],
+    name: "Aparta Estudio",
+    price: "Desde $145.000 COP/noche",
+    image: "/Habitacion.jpg",
+    features: ["Sala de estar", "Cocina", "Television Satelital"],
   },
 ]
 
@@ -47,7 +49,17 @@ export function RoomsSection() {
                 </ul>
               </CardContent>
               <CardFooter className="p-6 pt-0">
-                <Button className="w-full bg-primary hover:bg-primary/90">Reservar esta habitación</Button>
+                <Button className="w-full bg-primary hover:bg-primary/90" asChild>
+                  <a
+                    href={`https://wa.me/573197981552?text=${encodeURIComponent(
+                      `Hola, quisiera reservar la ${room.name}.`
+                    )}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Reservar esta habitación
+                  </a>
+                </Button>
               </CardFooter>
             </Card>
           ))}

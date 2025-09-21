@@ -6,23 +6,23 @@ import { Button } from "@/components/ui/button"
 
 const images = [
   {
-    src: "/modern-hotel-room-with-comfortable-bed-and-city-vi.jpg",
+    src: "/Habitacion.jpg",
     alt: "Habitación ejecutiva con vista a la ciudad",
   },
   {
-    src: "/elegant-hotel-bathroom-with-modern-fixtures.jpg",
+    src: "/Baño.jpg",
     alt: "Baño moderno y elegante",
   },
   {
-    src: "/hotel-lobby-with-comfortable-seating-and-reception.jpg",
+    src: "/Recepcion.jpg",
     alt: "Lobby y área de recepción",
   },
   {
-    src: "/hotel-breakfast-area-with-colombian-food.jpg",
+    src: "/Comedor.jpg",
     alt: "Área de desayuno",
   },
   {
-    src: "/hotel-exterior-facade-at-day-with-colombian-archit.jpg",
+    src: "/Fachada.jpg",
     alt: "Fachada del hotel durante el día",
   },
 ]
