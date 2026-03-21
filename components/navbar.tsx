@@ -62,6 +62,12 @@ export default function Navbar() {
                 </NavigationMenuItem>
 
                 <NavigationMenuItem>
+                  <Link href="/libro-digital-bienvenida" legacyBehavior passHref>
+                    <NavigationMenuLink className={navigationMenuTriggerStyle()}>Libro Digital</NavigationMenuLink>
+                  </Link>
+                </NavigationMenuItem>
+
+                <NavigationMenuItem>
                   <Link href="/faq" legacyBehavior passHref>
                     <NavigationMenuLink className={navigationMenuTriggerStyle()}>FAQ</NavigationMenuLink>
                   </Link>
@@ -114,6 +120,13 @@ export default function Navbar() {
                 onClick={() => setIsOpen(false)}
               >
                 Contacto
+              </Link>
+              <Link
+                href="/libro-digital-bienvenida"
+                className="block px-3 py-2 text-base font-medium text-foreground hover:text-primary hover:bg-accent rounded-md transition-colors"
+                onClick={() => setIsOpen(false)}
+              >
+                Libro Digital
               </Link>
               <Link
                 href="/faq"
