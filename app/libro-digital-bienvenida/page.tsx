@@ -1,5 +1,6 @@
 import type { Metadata } from "next"
 
+import WelcomeBookHome from "@/components/welcome-book-home"
 import WelcomeBookPage from "@/components/welcome-book-page"
 
 export const metadata: Metadata = {
@@ -9,5 +10,14 @@ export const metadata: Metadata = {
 }
 
 export default function DigitalWelcomeBookPage() {
-  return <WelcomeBookPage />
+  return (
+    <>
+      <div className="md:hidden">
+        <WelcomeBookHome />
+      </div>
+      <div className="hidden md:block">
+        <WelcomeBookPage />
+      </div>
+    </>
+  )
 }
