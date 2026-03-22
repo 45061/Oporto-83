@@ -1,5 +1,6 @@
 "use client"
 
+import Image from "next/image"
 import { useEffect, useState } from "react"
 import { ExternalLink, MapPin } from "lucide-react"
 
@@ -52,10 +53,12 @@ export default function NearbyHighlightsShowcase({ locale }: { locale: Locale })
 
       <Card className="overflow-hidden border-white/10 bg-white text-card-foreground">
         <div className="relative min-h-[500px]">
-          <img
+          <Image
             src={selectedPlace.imagePath}
-            alt={selectedPlace.name}
-            className="absolute inset-0 h-full w-full object-cover"
+            alt={selectedPlace.alt}
+            fill
+            sizes="(max-width: 1024px) 100vw, 60vw"
+            className="object-cover"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-slate-950/20 to-transparent" />
           <div className="absolute inset-x-0 bottom-0 p-8 text-white">

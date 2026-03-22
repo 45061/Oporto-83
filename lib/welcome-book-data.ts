@@ -6,6 +6,7 @@ type LocalizedText = Record<Locale, string>
 type LocalizedListItem = {
   name: LocalizedText
   description: LocalizedText
+  alt: LocalizedText
   imagePath?: string
   sourceUrl?: string
 }
@@ -127,7 +128,12 @@ const nearbyHighlightsLocalized: LocalizedListItem[] = [
       en: "Great for shopping, dining, cinema and quick errands just a few minutes from the hotel.",
       fr: "Ideal pour le shopping, les repas, le cinema et les courses rapides a quelques minutes de l'hotel.",
     },
-    imagePath: "https://www.hayueloscc.com/wp-content/uploads/2025/07/1-foto-Fachada.jpg",
+    alt: {
+      es: "Vista exterior del Centro Comercial Hayuelos en Bogota",
+      en: "Exterior view of Hayuelos Shopping Center in Bogota",
+      fr: "Vue exterieure du centre commercial Hayuelos a Bogota",
+    },
+    imagePath: "/welcome-book/places/centro-comercial-hayuelos-bogota.jpg",
     sourceUrl: "https://www.hayueloscc.com/historia-de-hayuelos/",
   },
   {
@@ -137,7 +143,12 @@ const nearbyHighlightsLocalized: LocalizedListItem[] = [
       en: "A convenient shopping center for shopping, restaurants and a relaxed outing.",
       fr: "Un centre commercial pratique pour faire du shopping, manger et passer un moment tranquille.",
     },
-    imagePath: "https://commons.wikimedia.org/wiki/Special:FilePath/Salitre%20Plaza%202022.jpg",
+    alt: {
+      es: "Vista exterior de Salitre Plaza en Bogota",
+      en: "Exterior view of Salitre Plaza in Bogota",
+      fr: "Vue exterieure de Salitre Plaza a Bogota",
+    },
+    imagePath: "/welcome-book/places/salitre-plaza-bogota.jpg",
     sourceUrl: "https://commons.wikimedia.org/wiki/File:Salitre_Plaza_2022.jpg",
   },
   {
@@ -147,7 +158,12 @@ const nearbyHighlightsLocalized: LocalizedListItem[] = [
       en: "One of the best-known shopping complexes for shopping and entertainment.",
       fr: "L'un des centres commerciaux les plus connus pour le shopping et les loisirs.",
     },
-    imagePath: "https://commons.wikimedia.org/wiki/Special:FilePath/Centro%20comercial%20gran%20estacion.JPG",
+    alt: {
+      es: "Fachada del centro comercial Gran Estacion en Bogota",
+      en: "Facade of Gran Estacion shopping center in Bogota",
+      fr: "Facade du centre commercial Gran Estacion a Bogota",
+    },
+    imagePath: "/welcome-book/places/gran-estacion-bogota.jpg",
     sourceUrl: "https://commons.wikimedia.org/wiki/File:Centro_comercial_gran_estacion.JPG",
   },
   {
@@ -161,7 +177,12 @@ const nearbyHighlightsLocalized: LocalizedListItem[] = [
       en: "A perfect green space to walk, enjoy fresh air and unwind.",
       fr: "Un espace vert parfait pour se promener, respirer et se detendre.",
     },
-    imagePath: "https://commons.wikimedia.org/wiki/Special:FilePath/Lago%20Jard%C3%ADn%20Bot%C3%A1nico%20de%20Bogot%C3%A1.jpg",
+    alt: {
+      es: "Lago y zonas verdes del Jardin Botanico de Bogota",
+      en: "Lake and green areas of the Bogota Botanical Garden",
+      fr: "Lac et espaces verts du Jardin botanique de Bogota",
+    },
+    imagePath: "/welcome-book/places/jardin-botanico-bogota.jpg",
     sourceUrl: "https://commons.wikimedia.org/wiki/File:Lago_Jard%C3%ADn_Bot%C3%A1nico_de_Bogot%C3%A1.jpg",
   },
   {
@@ -171,7 +192,12 @@ const nearbyHighlightsLocalized: LocalizedListItem[] = [
       en: "An interactive family-friendly plan with science, experiences and educational activities.",
       fr: "Une sortie interactive et familiale avec science, experiences et activites educatives.",
     },
-    imagePath: "https://commons.wikimedia.org/wiki/Special:FilePath/Maloka%20in%20Bogot%C3%A1%20Colombia.jpg",
+    alt: {
+      es: "Vista del centro interactivo Maloka en Bogota",
+      en: "View of Maloka interactive center in Bogota",
+      fr: "Vue du centre interactif Maloka a Bogota",
+    },
+    imagePath: "/welcome-book/places/maloka-bogota.jpg",
     sourceUrl: "https://commons.wikimedia.org/wiki/File:Maloka_in_Bogot%C3%A1_Colombia.jpg",
   },
   {
@@ -185,7 +211,12 @@ const nearbyHighlightsLocalized: LocalizedListItem[] = [
       en: "Amusement park for an active afternoon with rides and a family atmosphere.",
       fr: "Parc d'attractions pour un apres-midi actif avec maneges et ambiance familiale.",
     },
-    imagePath: "https://commons.wikimedia.org/wiki/Special:FilePath/Bogot%C3%A1%20Parque%20Salitre%20M%C3%A1gico.JPG",
+    alt: {
+      es: "Atraccion del parque Salitre Magico en Bogota",
+      en: "Ride at Salitre Magico amusement park in Bogota",
+      fr: "Attraction du parc Salitre Magico a Bogota",
+    },
+    imagePath: "/welcome-book/places/salitre-magico-bogota.jpg",
     sourceUrl: "https://commons.wikimedia.org/wiki/File:Bogot%C3%A1_Parque_Salitre_M%C3%A1gico.JPG",
   },
   {
@@ -199,7 +230,12 @@ const nearbyHighlightsLocalized: LocalizedListItem[] = [
       en: "A cultural route to discover squares, architecture and iconic places in the city.",
       fr: "Un parcours culturel pour decouvrir les places, l'architecture et les sites emblematiques de la ville.",
     },
-    imagePath: "https://commons.wikimedia.org/wiki/Special:FilePath/La%20Candelaria%20-%20Bogota,%20Colombia%20%282012%29.jpg",
+    alt: {
+      es: "Calle del Centro Historico de Bogota en La Candelaria",
+      en: "Street view of Bogota Historic Center in La Candelaria",
+      fr: "Vue d'une rue du centre historique de Bogota a La Candelaria",
+    },
+    imagePath: "/welcome-book/places/centro-historico-bogota-la-candelaria.jpg",
     sourceUrl: "https://commons.wikimedia.org/wiki/File:La_Candelaria_-_Bogota,_Colombia_(2012).jpg",
   },
 ]
@@ -556,6 +592,7 @@ export function getNearbyHighlights(locale: Locale) {
   return nearbyHighlightsLocalized.map((item) => ({
     name: pickText(item.name, locale),
     description: pickText(item.description, locale),
+    alt: pickText(item.alt, locale),
     imagePath: item.imagePath ?? "",
     sourceUrl: item.sourceUrl ?? "",
   }))
