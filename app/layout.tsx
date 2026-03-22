@@ -7,10 +7,15 @@ import { Suspense } from "react"
 import "./globals.css"
 import Navbar from "@/components/navbar"
 
+const siteUrl =
+  process.env.NEXT_PUBLIC_SITE_URL ??
+  (process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : "http://localhost:3000")
+
 export const metadata: Metadata = {
   title: "Hotel Oporto 83 - Tu descanso cerca al Aeropuerto El Dorado",
   description:
     "Hotel boutique en Bogotá, ubicado estratégicamente cerca al Aeropuerto El Dorado. Comodidad, ubicación y atención personalizada.",
+  metadataBase: new URL(siteUrl),
   generator: "v0.app",
   icons: {
     icon: "/OPORTO-05.png",

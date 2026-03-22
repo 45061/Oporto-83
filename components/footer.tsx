@@ -49,6 +49,11 @@ function Footer() {
                 </Link>
               </li>
               <li>
+                <Link href="/libro-digital-bienvenida" className="hover:text-secondary transition-colors">
+                  Libro Digital
+                </Link>
+              </li>
+              <li>
                 <Link href="/faq" className="hover:text-secondary transition-colors">
                   Preguntas Frecuentes
                 </Link>
