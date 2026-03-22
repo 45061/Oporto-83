@@ -290,6 +290,7 @@ export default function WelcomeBookSectionPage({ slug }: { slug: SectionSlug }) 
         </section>
 
         <section className="space-y-4 px-5 py-5">
+          <h2 className="sr-only">Contenido principal de la seccion</h2>
           <div className="rounded-3xl border border-border/60 bg-card p-5">
             <p className="text-sm leading-relaxed text-muted-foreground">{t[slug].intro}</p>
           </div>
@@ -297,11 +298,11 @@ export default function WelcomeBookSectionPage({ slug }: { slug: SectionSlug }) 
           {slug === "wifi" && (
             <>
               <div className="rounded-3xl bg-card p-5">
-                <p className="text-sm text-muted-foreground">{t.wifi.network}</p>
+                <h3 className="text-sm text-muted-foreground">{t.wifi.network}</h3>
                 <p className="mt-1 text-2xl font-bold text-foreground">{hotelWelcomeInfo.wifiName}</p>
               </div>
               <div className="rounded-3xl bg-card p-5">
-                <p className="text-sm text-muted-foreground">{t.wifi.password}</p>
+                <h3 className="text-sm text-muted-foreground">{t.wifi.password}</h3>
                 <p className="mt-1 text-2xl font-bold text-foreground">{hotelWelcomeInfo.wifiPassword}</p>
               </div>
               {t.wifi.bullets.map((item) => (
@@ -322,9 +323,12 @@ export default function WelcomeBookSectionPage({ slug }: { slug: SectionSlug }) 
                 </div>
               ))}
               <div className="rounded-3xl bg-card p-5 text-sm text-muted-foreground">
+                <h3 className="font-semibold text-foreground">Check-in y Check-out</h3>
+                <div className="mt-2">
                 Check-in: <strong>{hotelWelcomeInfo.checkIn}</strong>
                 <br />
                 Check-out: <strong>{hotelWelcomeInfo.checkOut}</strong>
+                </div>
               </div>
             </>
           )}
@@ -348,6 +352,7 @@ export default function WelcomeBookSectionPage({ slug }: { slug: SectionSlug }) 
           {slug === "ubicacion" && (
             <>
               <div className="rounded-3xl bg-card p-5 text-sm leading-relaxed text-muted-foreground">
+                <h3 className="mb-2 font-semibold text-foreground">Referencia de ubicacion</h3>
                 <strong>{t.ubicacion.address}:</strong> {hotelWelcomeInfo.address}
                 <br />
                 <strong>{t.ubicacion.airport}:</strong> {localizedHotelInfo.airportDistance[locale]}
@@ -360,7 +365,7 @@ export default function WelcomeBookSectionPage({ slug }: { slug: SectionSlug }) 
                     <Image src={place.imagePath} alt={place.alt} fill sizes="(max-width: 768px) 100vw, 50vw" className="object-cover" />
                   </div>
                   <div className="p-4">
-                    <p className="font-semibold text-foreground">{place.name}</p>
+                    <h3 className="font-semibold text-foreground">{place.name}</h3>
                     <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{place.description}</p>
                   </div>
                 </div>
@@ -378,9 +383,10 @@ export default function WelcomeBookSectionPage({ slug }: { slug: SectionSlug }) 
 
           {slug === "restaurantes" && (
             <>
+              <h2 className="sr-only">Listado de restaurantes cercanos</h2>
               {restaurants.map((item) => (
                 <div key={item.name} className="rounded-3xl border border-border/60 p-5">
-                  <p className="font-semibold text-foreground">{item.name}</p>
+                  <h3 className="font-semibold text-foreground">{item.name}</h3>
                   <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{item.description}</p>
                   <p className="mt-3 text-sm text-muted-foreground">{item.address}</p>
                   <a href={item.mapsUrl} target="_blank" rel="noopener noreferrer" className="mt-4 inline-flex text-sm font-semibold text-primary">
@@ -393,9 +399,10 @@ export default function WelcomeBookSectionPage({ slug }: { slug: SectionSlug }) 
 
           {slug === "planes" && (
             <>
+              <h2 className="sr-only">Listado de planes y lugares recomendados</h2>
               {plans.map((item) => (
                 <div key={item.name} className="rounded-3xl border border-border/60 p-5">
-                  <p className="font-semibold text-foreground">{item.name}</p>
+                  <h3 className="font-semibold text-foreground">{item.name}</h3>
                   <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{item.description}</p>
                   <p className="mt-3 text-sm text-muted-foreground">{item.address}</p>
                   <a href={item.mapsUrl} target="_blank" rel="noopener noreferrer" className="mt-4 inline-flex text-sm font-semibold text-primary">
@@ -408,9 +415,10 @@ export default function WelcomeBookSectionPage({ slug }: { slug: SectionSlug }) 
 
           {slug === "contacto" && (
             <>
+              <h2 className="sr-only">Canales de contacto del hotel</h2>
               {contacts.map((item) => (
                 <div key={item.title} className="rounded-3xl border border-border/60 p-5">
-                  <p className="font-semibold text-foreground">{item.title}</p>
+                  <h3 className="font-semibold text-foreground">{item.title}</h3>
                   <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{item.detail}</p>
                   <a href={item.actionHref} target="_blank" rel="noopener noreferrer" className="mt-4 inline-flex text-sm font-semibold text-primary">
                     {item.actionLabel}

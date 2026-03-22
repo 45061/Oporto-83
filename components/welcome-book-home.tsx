@@ -138,6 +138,7 @@ export default function WelcomeBookHome() {
         </section>
 
         <section className="grid grid-cols-2 border-t border-border/60">
+          <h2 className="sr-only">Secciones principales del libro de bienvenida</h2>
           {sectionCards.map((card) => {
             const Icon = card.icon
             const label = t.sections[card.key]
@@ -151,13 +152,14 @@ export default function WelcomeBookHome() {
                 <div className="rounded-2xl bg-primary/8 p-4 text-primary transition group-hover:bg-secondary/15 group-hover:text-secondary">
                   <Icon className="h-8 w-8" />
                 </div>
-                <span className="text-sm font-semibold text-foreground">{label}</span>
+                <h3 className="text-sm font-semibold text-foreground">{label}</h3>
               </Link>
             )
           })}
         </section>
 
         <section className="px-5 py-5">
+          <h2 className="sr-only">Acceso rapido a recepcion</h2>
           <a
             href={hotelWelcomeInfo.whatsappUrl}
             target="_blank"

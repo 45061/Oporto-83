@@ -107,12 +107,13 @@ export default function WelcomeBookPage() {
             </div>
 
             <div className="mt-10 grid gap-4 sm:grid-cols-2 xl:grid-cols-4">
+              <h2 className="sr-only">Informacion rapida para huespedes</h2>
               {quickInfo.map((item) => (
                 <Card key={item.title} className="border-white/15 bg-white/10 text-white shadow-none">
                   <CardContent className="space-y-3 p-5">
                     <item.icon className="h-6 w-6 text-secondary" />
                     <div>
-                      <p className="text-sm font-semibold">{item.title}</p>
+                      <h3 className="text-sm font-semibold">{item.title}</h3>
                       {typeof item.value === "string" ? (
                         <p className="mt-2 text-sm leading-relaxed text-white/80">{item.value}</p>
                       ) : (
@@ -209,7 +210,7 @@ export default function WelcomeBookPage() {
                   {usefulServices.map((service) => (
                     <div key={service} className="flex items-start gap-3 rounded-2xl bg-muted p-4">
                       <Sparkles className="mt-0.5 h-5 w-5 text-secondary" />
-                      <p className="text-sm leading-relaxed text-muted-foreground">{service}</p>
+                      <h4 className="text-sm leading-relaxed font-medium text-muted-foreground">{service}</h4>
                     </div>
                   ))}
                 </div>
@@ -252,7 +253,7 @@ export default function WelcomeBookPage() {
               <div className="mt-6 grid gap-4 md:grid-cols-3">
                 {emergencyContacts.map((contact) => (
                   <div key={contact.title} className="rounded-2xl bg-muted p-5">
-                    <p className="text-sm font-semibold text-primary">{contact.title}</p>
+                    <h3 className="text-sm font-semibold text-primary">{contact.title}</h3>
                     <p className="mt-2 text-sm text-muted-foreground">{contact.detail}</p>
                     <div className="mt-4">
                       <Button variant="outline" className="bg-transparent" asChild>
