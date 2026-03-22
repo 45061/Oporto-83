@@ -3,6 +3,7 @@ import { notFound } from "next/navigation"
 
 import WelcomeBookSectionPage, { type SectionSlug } from "@/components/welcome-book-section-page"
 import WelcomeBookPage from "@/components/welcome-book-page"
+import WelcomeBookStructuredData from "@/components/welcome-book-structured-data"
 
 const validSlugs = new Set([
   "wifi",
@@ -55,7 +56,34 @@ export function generateMetadata({ params }: { params: { slug: string } }): Meta
     return {}
   }
 
-  return metadataBySlug[params.slug as SectionSlug]
+  const baseMetadata = metadataBySlug[params.slug as SectionSlug]
+
+  return {
+    ...baseMetadata,
+    openGraph: {
+      title: typeof baseMetadata.title === "string" ? baseMetadata.title : "Libro de Bienvenida | Hotel Oporto 83",
+      description: baseMetadata.description ?? "",
+      type: "article",
+      url: `/libro-digital-bienvenida/${params.slug}`,
+      images: [
+        {
+          url: "/Recepcion.jpg",
+          width: 1200,
+          height: 630,
+          alt: "Recepcion del Hotel Oporto 83 en Bogota",
+        },
+      ],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: typeof baseMetadata.title === "string" ? baseMetadata.title : "Libro de Bienvenida | Hotel Oporto 83",
+      description: baseMetadata.description ?? "",
+      images: ["/Recepcion.jpg"],
+    },
+    alternates: {
+      canonical: `/libro-digital-bienvenida/${params.slug}`,
+    },
+  }
 }
 
 export default function WelcomeBookDetailPage({ params }: { params: { slug: string } }) {
@@ -63,8 +91,14 @@ export default function WelcomeBookDetailPage({ params }: { params: { slug: stri
     notFound()
   }
 
+  const pageMetadata = metadataBySlug[params.slug as SectionSlug]
+  const title =
+    typeof pageMetadata.title === "string" ? pageMetadata.title : "Libro de Bienvenida | Hotel Oporto 83"
+  const description = pageMetadata.description ?? "Informacion util para huespedes del Hotel Oporto 83."
+
   return (
     <>
+      <WelcomeBookStructuredData slug={params.slug} title={title} description={description} />
       <div className="md:hidden">
         <WelcomeBookSectionPage slug={params.slug as SectionSlug} />
       </div>
